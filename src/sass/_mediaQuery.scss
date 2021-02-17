@@ -1,0 +1,134 @@
+
+@media (max-width: 1010px){
+	.typed{
+		font-size: 2rem;
+	}
+
+	.cont-conoc{
+		margin-top: 1rem;
+	}
+
+	.sobreMi__cont-texto h2{
+		font-size: 1.6rem;
+	}
+}
+
+@media (max-width: 950px){
+	.proyectos__cont-card{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 840px){
+
+	.flex{
+		flex-direction: column;
+		justify-content: normal;
+	}
+	
+	.sobreMi__cont-texto{
+		width: 100%;
+		height: max-content;
+	}
+	
+	.sobreMi__cont-top{
+		padding: 3rem 0 2rem 0;
+	}
+
+	.sobreMi__cont-info,.cont-conoc{
+		width: 90%;
+		margin: 1rem auto 0 auto;
+		grid-template-columns: repeat(8, 1fr);
+	}
+}
+
+@media (max-width: 800px){
+	.img-form{
+		display: none;
+	}
+
+	.contacto__cont-formulario form{
+		width: 100%;
+	}
+}
+
+@media (max-width: 700px){
+	.proyectos__cont-card{
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media (max-width: 640px){
+	.cont-conoc{
+		grid-template-columns: repeat(4, 1fr);
+		width: 100%;
+	}
+
+	.sobreMi__sec-top{
+		padding:3rem 0.5rem 1rem 0.5rem;
+	}
+
+	.ml{
+		margin-left: 0;
+	}
+
+	.sobreMi__cont-info{
+		width: 100%;
+		.cuerpo p{
+			font-size: 17px;
+		}
+	}
+
+	.typed{
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 590px){
+	.btn-menu{
+		display: block;
+		color: white;
+		font-size: 2.5rem;
+		cursor: pointer;
+	}
+
+	.cont-menu{
+		position: absolute;
+		width: 50vw;
+		height: 100vh;
+		display: block;
+		background: lighten($color: $contColor, $amount: 10);
+		top: 0;
+		padding: 1rem;
+		right: -50vw;
+		transition: right 0.2s ease-out;
+		li{
+			margin:2rem 0;
+			align-items: flex-end;
+		}
+	}
+}
+
+@media (max-width: 490px){
+	#nombre,#email{
+		width: 100%;
+		margin: 1rem 0 0 0;
+	}
+}
+
+@media (max-width: 380px){
+	.encabezado{
+		margin-bottom: 0.7rem;
+	}
+
+	.titulo{
+		font-size: 20px;
+	}
+
+	.sobreMi__cont-info .imagen {
+		width: 4.5rem;
+		height: 4.5rem;
+		border-radius: 50%;
+		margin-left: 0.5rem;
+	}
+}

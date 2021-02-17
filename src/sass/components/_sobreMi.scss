@@ -1,0 +1,72 @@
+.sobreMi__sec-top{
+	height: max-content;
+	background-color: $azul;
+	padding: 3rem 2rem 2rem 0;
+}
+
+.sobreMi__cont-texto{
+    width: 55%;
+    h2{
+        font-size: 2.6rem;
+        color:#ffffff;
+        position: relative;
+        margin-top: 0;
+        font-weight: 700;
+    }
+}
+
+.sobreMi__cont-info{
+	background-color: #adcbd747;
+	width: 35rem;
+	padding: 1rem;
+	height: max-content;
+    .imagen{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        margin-left:1rem;
+    }
+    .encabezado{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .cont-texto-info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .cuerpo p{
+        font-size: 20px;
+    }
+}
+
+.typed{
+	font-size: 4rem;
+	font-weight: 700;
+}
+
+.cont-conoc{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: max-content;
+    grid-gap:2px;
+    width: 25rem;
+    padding: 0.5rem;
+	background-color: #adcbd747;
+    li{
+        background-color: $contColorSec;
+        list-style: none;
+        padding: 0.5rem;
+        border-radius: 2px;
+        color:white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+        i{
+            font-size: 2rem;
+        }
+    }
+}
+
