@@ -70,6 +70,29 @@ body{
 	color:#7377ad;
 }
 
+#angular{
+	color:#D6002F;
+}
+
+#typescript{
+	color:#2F74C0;
+	fill:#2F74C0;
+}
+
+#git{
+	color:#EB4D28;
+}
+
+#firebase{
+	color:#FEA410;
+	fill:#FEA410;
+}
+
+#ionic{
+	color:#4886F1;
+	fill:#4886F1;
+}
+
 .flex{
 	display: flex;
 	justify-content: space-between;
@@ -109,4 +132,24 @@ header li:hover:after,.boton:hover:after{
 
 .section{
 	scroll-margin: $header-height;
+}
+
+.cont-ws{
+	position: fixed;
+	max-width: 4rem;
+	max-height: 4rem;
+	width: 15vw;
+	height: 15vw;
+	border-radius: 50%;
+	z-index: 3;
+	bottom: 1vh;
+	overflow: hidden;
+	padding: 0.7rem;
+	background: #40c351;
+	right: 1vw;
+}
+
+.cont-ws img{
+	width: 100%;
+	height: 100%;
 }

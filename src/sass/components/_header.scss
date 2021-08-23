@@ -22,8 +22,6 @@
 	text-transform: uppercase;
 	flex-direction: column;
 	height: max-content;
-	
-
 }
 
 .header__header li a{
@@ -52,4 +50,16 @@
 
 .menu-activo{
 	right: 0 !important;
+}
+
+.btn-cv{
+	background-color: $naranja;
+	padding: 1rem 0;
+	border-radius: 4px;
+	opacity: .8;
+	transition: opacity 0.2s ease-out;
+	color:white;
+	&:hover{
+		opacity: 1;
+	}
 }

@@ -66,8 +66,62 @@ article{
     border: none;
 	cursor: pointer;
 	font-size: inherit;
+	opacity: .8;
+	transition: opacity 0.2s ease-out;
 	&:disabled{
 		opacity: .5;
 		cursor: default;
+	}
+	&:hover:enabled{
+		opacity: 1;
+	}
+}
+
+.proyectos__cont-prin-app{
+	margin: 2rem 0;
+	display: flex;
+	width: 100%;
+
+	.cont-app-img{
+		width: 34rem;
+		display: flex;
+		img{
+			width: 50%;
+			padding-left: 0.5rem;
+		}
+		#img-ter{
+			display: none;
+		}
+	}
+	.cont-info{
+		margin-left: 1rem;
+		flex:1;
+		ul{
+			margin: 0.5rem 0 1rem 1rem;
+			li{
+				margin:0.5rem 0;
+			}
+		}
+	}
+
+	.cont-tec{
+		display: flex;
+		margin: 1rem 0;
+		li{
+			list-style: none;
+			margin: 0 1rem;
+		}
+
+		svg{
+			width: 2rem;
+			height: 2rem;
+		}
+		i{
+			font-size: 2rem;
+		}
+	}
+
+	.boton{
+		margin-left: 0;
 	}
 }

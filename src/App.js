@@ -17,6 +17,11 @@ const App = () => {
 
     return (
         <>  
+            <div class="cont-ws">
+                <a target="a" href="https://api.whatsapp.com/send?phone=18097717766&text=Hola%20Andrison!">
+                    <img src="images/ws.webp" />
+                </a>
+            </div>
             <Header />
             <SobreMi referencia={ref1}/>
             <Proyectos referencia={ref2}/>

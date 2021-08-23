@@ -43,6 +43,16 @@ const Header = () => {
 							Contactame	
 						</a>
 					</li>
+
+					<a 
+						href="https://andrison1425.github.io/curri-pro.pdf" 
+						className="btn-cv"
+						download="CV de Andrison"
+					>
+						<li>
+							Descargar CV	
+						</li>
+					</a>
 				</div>
 				<i 
 					className="fas fa-bars btn-menu"

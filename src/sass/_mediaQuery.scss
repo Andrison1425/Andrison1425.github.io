@@ -17,6 +17,18 @@
 	.proyectos__cont-card{
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	#img-sec{
+		display: none;
+	}
+
+	.proyectos__cont-prin-app .cont-app-img{
+		width: 17rem;
+		img{
+			width: 100%;
+			height: fit-content;
+		}
+	}
 }
 
 @media (max-width: 840px){
@@ -52,6 +64,14 @@
 	}
 }
 
+@media (max-width: 730px){
+
+	.header__header li {
+		font-size: 15px;
+		margin: 0 0.7rem;
+	}
+}
+
 @media (max-width: 700px){
 	.proyectos__cont-card{
 		grid-template-columns: repeat(1, 1fr);
@@ -82,16 +102,14 @@
 	.typed{
 		font-size: 1.5rem;
 	}
-}
 
-@media (max-width: 590px){
 	.btn-menu{
 		display: block;
 		color: white;
 		font-size: 2.5rem;
 		cursor: pointer;
 	}
-
+	
 	.cont-menu{
 		position: absolute;
 		width: 50vw;
@@ -102,10 +120,36 @@
 		padding: 1rem;
 		right: -50vw;
 		transition: right 0.2s ease-out;
-		li{
+		>li{
 			margin:2rem 0;
 			align-items: flex-end;
 		}
+		>a{
+			li{
+				align-items: flex-end;
+			}
+			display: block;
+		}	
+	}
+
+	.proyectos__cont-prin-app{
+		flex-direction: column;
+		.cont-app-img{
+			width: 100%;
+			justify-content: space-between;
+			margin-bottom: 1rem;
+			img{
+				width: 33%;
+				margin:0;
+			}
+		}
+	}
+	#img-sec, #img-ter{
+		display: inline;
+	}
+
+	.header__header, .reyeno{
+		height: 3.5rem;
 	}
 }
 
@@ -113,6 +157,13 @@
 	#nombre,#email{
 		width: 100%;
 		margin: 1rem 0 0 0;
+	}
+
+	#img-ter{
+		display: none;
+	}
+	.proyectos__cont-prin-app .cont-app-img img{
+		width: 50%;
 	}
 }
 
@@ -130,5 +181,10 @@
 		height: 4.5rem;
 		border-radius: 50%;
 		margin-left: 0.5rem;
+	}
+
+	.cont-menu{
+		width: 70vw;
+		right: -70vw;
 	}
 }

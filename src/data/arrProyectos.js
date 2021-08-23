@@ -5,15 +5,41 @@ const react={ruta:"fab fa-react", id:"react"};
 const laravel={ruta:"fab fa-laravel", id:"laravel"};
 const sass={ruta:"fab fa-sass", id:"sass"};
 const js={ruta:"fab fa-js-square", id:"js"};
+const angular={ruta:"fab fa-angular", id:"angular"};
+const typescript={ruta:"fab fa-tumblr-square", id:"typescript"};
 
 const arrProyectos=[
     {
-        titulo:"Empresa de construcciones",
-        descripcion:"Sitio web moderno para un empresa de construcciones de casas.",
-        esApp:false,
-        iconos:[html,css,bootstrap],
-        ruta:"https://festive-jones-b6407f.netlify.app/",
-        rutaImg:"1.png"
+        titulo:"Countries App",
+        descripcion:"Aplicación para visualizar la información de todos los paises consumiendo una Rest Api y manejando el estado con Redux.",
+        esApp:true,
+        iconos:[html,sass,react],
+        ruta:"https://modest-rosalind-51d46c.netlify.app/",
+        rutaImg:"10.png"
+    },
+    {
+        titulo:"WeatherApp",
+        descripcion:"App para obtener datos sobre el clima de un lugar.",
+        esApp:true,
+        iconos:[typescript,angular],
+        ruta:"https://hardcore-euclid-97fe64.netlify.app/",
+        rutaImg:"13.png"
+    },
+    {
+        titulo:"ToDownloadIt",
+        descripcion:"WebApp para descargar videojuegos y consultar su información .",
+        esApp:true,
+        iconos:[laravel,sass,js],
+        ruta:"https://serene-mountain-89565.herokuapp.com/",
+        rutaImg:"8.png"
+    },
+    {
+        titulo:"Country Quiz",
+        descripcion:"Aplicación de preguntas sobre capitales y banderas consumiendo una Api. El código incluye módulos y servicios.",
+        esApp:true,
+        iconos:[typescript,angular],
+        ruta:"https://romantic-boyd-12f372.netlify.app/",
+        rutaImg:"12.png"
     },
     {
         titulo:"App de tareas",
@@ -24,12 +50,12 @@ const arrProyectos=[
         rutaImg:"7.png"
     },
     {
-        titulo:"ToDownloadIt",
-        descripcion:"WebApp para descargar videojuegos y consultar su información .",
+        titulo:"GitHub Jobs",
+        descripcion:"Aplicación de empleos traidos de la Api de GitHub Jobs.",
         esApp:true,
-        iconos:[laravel,sass,js],
-        ruta:"https://serene-mountain-89565.herokuapp.com/",
-        rutaImg:"8.png"
+        iconos:[typescript, angular],
+        ruta:"https://compassionate-goldwasser-b84b7d.netlify.app/",
+        rutaImg:"14.png"
     },
     {
         titulo:"Escuela de cocina",

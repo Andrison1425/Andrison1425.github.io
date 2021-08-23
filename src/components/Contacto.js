@@ -41,6 +41,7 @@ const Contacto = ({referencia}) => {
                         placeholder="Escriba un mensaje" 
                         minLength="20" 
                         maxLength="500"
+                        rows="6"
                     ></textarea>
 					<input 
                         type = "hidden" 
@@ -60,7 +61,6 @@ const Contacto = ({referencia}) => {
 			</div>
 			
 		</div>
-		
 	</section>
     )
 }

@@ -12,17 +12,18 @@ const Extras = ({referencia}) => {
                 <div className="cont">
                     <h2>Ruta de aprendizaje planeada</h2>
                     <ul>
-                        <li className="raya">HTML</li>
-                        <li className="raya">CSS</li>
+                        <li className="raya">HTML y CSS</li>
                         <li className="raya">JavaScript</li>
                         <li className="raya">Bootstrap</li>
                         <li className="raya">SASS</li>
                         <li className="raya">React</li>
                         <li className="raya">PHP/Laravel</li>
-                        <li>Angular/TypeScript ◄</li>
+                        <li className="raya">Angular/TypeScript</li>
+                        <li className="raya">Firebase</li>
+                        <li className="raya">Ionic</li>
+                        <li>NodeJs ◄</li>
                         <li>C#/.NET CORE</li>
                         <li>React Native</li>
-                        <li>NodeJs</li>
                     </ul>
                 </div>
             </section>
@@ -33,16 +34,16 @@ const Extras = ({referencia}) => {
                     <div className="proyectos__cont-card fondo2">
                         <article>
                             <div className="img">
-                                <img src="images/10.png" />
+                                <img src="images/11.png" />
                             </div>
                             <div className="article-body">
-                                <h3>FlagApp</h3>
-                                <p>Aplicación para visualizar la información de todos los paises con sus banderas consumiendo una Rest Api.</p>
-                                <a href="https://modest-rosalind-51d46c.netlify.app/" target="b" className="boton">Ver aplicación web </a>
+                                <h3>Clon de Facebook</h3>
+                                <p>Clon de Facebook usando useContext/useReducer.</p>
+                                <a href="https://focused-galileo-8c0b4e.netlify.app/" target="b" className="boton">Ver aplicación web </a>
                                 <span className="cont-icons">
-                                    <i className="fab fa-html5" id="html"></i>
-                                    <i className="fab fa-css3-alt" id="css"></i>
                                     <i className="fab fa-react" id="react"></i>
+                                    <i className="fab fa-sass" id="sass"></i>
+                                    <i className="fab fa-laravel" id="laravel"></i>
                                 </span>
                             </div>
                         </article>
