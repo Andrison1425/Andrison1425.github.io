@@ -17,13 +17,12 @@ const Extras = ({ reference }: { reference: React.RefObject<HTMLElement> }) => {
                         <li className="raya">Bootstrap</li>
                         <li className="raya">SASS</li>
                         <li className="raya">React</li>
-                        <li className="raya">PHP/Laravel</li>
                         <li className="raya">Angular/TypeScript</li>
                         <li className="raya">Firebase</li>
                         <li className="raya">Ionic</li>
+                        <li className="raya">React Native/Expo</li>
                         <li>NodeJs ◄</li>
                         <li>C#/.NET CORE</li>
-                        <li>React Native</li>
                     </ul>
                 </div>
             </section>

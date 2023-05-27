@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import Header from './components/Header'
-import SobreMi from './components/SobreMi'
-import Proyectos from './components/Proyectos'
+import AboutMe from './components/AboutMe'
+import Proyectos from './components/Projects'
 import Extras from './components/Extras'
 import Contact from './components/Contact'
 import useOnScreen from './hooks/useOnScreen'
@@ -24,7 +24,7 @@ const App = () => {
             </a>
         </div>
         <Header />
-        <SobreMi reference={references.ref1} />
+        <AboutMe reference={references.ref1} />
         <Proyectos reference={references.ref2} />
         <Extras reference={references.ref3} />
         <Contact reference={references.ref4} />

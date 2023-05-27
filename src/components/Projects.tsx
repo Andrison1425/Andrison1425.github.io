@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-import arrProyectos from '../data/arrProyectos'
+import projectsData from '../data/projectsData'
 const Imagen = require("../images/screen.jpeg");
 const Imagen2 = require("../images/screen2.jpeg");
 const Imagen3 = require("../images/screen3.jpeg");
 const Imagen4 = require("../images/screen4.jpeg");
+const Imagen5 = require("../images/screen5.png");
+const Imagen6 = require("../images/screen6.png");
 
-const Proyectos = ({ reference }: { reference: React.RefObject<HTMLElement> }) => {
+const Projects = ({ reference }: { reference: React.RefObject<HTMLElement> }) => {
 
-    const [state, setState] = useState(3);
     return (
         <section
             className="proyectos__cont-proyectos section"
@@ -115,42 +116,51 @@ const Proyectos = ({ reference }: { reference: React.RefObject<HTMLElement> }) =
                     </div>
                 </div>
 
-                <div className="proyectos__cont-card fondo2">
-                    {arrProyectos.map((proyecto, index) => {
-                        if (index < state) {
-                            return (
-                                <article key={index}>
-                                    <div className="img">
-                                        <img
-                                            src={`images/${proyecto.rutaImg}`}
-                                            alt="Imagen"
-                                        />
-                                    </div>
-                                    <div className="article-body">
-                                        <h3>{proyecto.titulo}</h3>
-                                        <p>{proyecto.descripcion}</p>
-                                        <a href={proyecto.ruta} target={String(index)} className="boton">
-                                            {proyecto.esApp ? "Ver aplicación web" : "Ver sitio web"}
-                                        </a>
-                                        <span className="cont-icons">
-                                            {proyecto.iconos.map((icono, index) => <i key={index} className={icono.ruta} id={icono.id}></i>)}
-                                        </span>
-                                    </div>
-                                </article>
-                            )
-                        } else {
-                            return null;
-                        }
-                    })}
+                <div className="proyectos__cont-prin-app">
+                    <div className="cont-app-img">
+                        <img src={Imagen5} alt="Musicalia Screen" id="img-sec" />
+                        <img src={Imagen6} alt="Musicalia Screen" />
+                    </div>
+                    <div className="cont-info">
+                        <h2>Comprafacil (En desarrollo)</h2><br />
+                        <h4>Características</h4>
+                        <ul>
+                            <li>Crear una cuenta con email/contraseña y teléfono.</li>
+                            <li>Uso de Firebase Functions.</li>
+                            <li>Obtener ubicación del usuario.</li>
+                        </ul>
+                        <h4>Tecnologías</h4>
+                        <div className="cont-tec">
+                            <li id="expo">
+                                <svg><use href="#ico-expo"></use></svg>
+                                <h4>Expo</h4>
+                            </li>
+                            <li id="react">
+                                <i className="fab fa-react" id="react" />
+                                <h4>React Native</h4>
+                            </li>
+                            <li id="typescript">
+                                <svg><use href="#ico-typescript"></use></svg>
+                                <h4>TypeScript</h4>
+                            </li>
+                            <li id="firebase">
+                                <svg><use href="#ico-firebase"></use></svg>
+                                <h4>Firebase</h4>
+                            </li>
+                        </div>
+
+                        {/* <a
+                            href="https://play.google.com/store/apps/details?id=com.puzeos.track_list"
+                            target="musicalia"
+                            className="boton"
+                        >
+                            Ver aplicación móvil (Android)
+                        </a> */}
+                    </div>
                 </div>
-                <button
-                    className="btn-mas"
-                    onClick={() => setState(state + 3)}
-                    disabled={state >= arrProyectos.length ? true : false}
-                >Ver Más</button>
             </div>
         </section>
     )
 }
 
-export default Proyectos
+export default Projects
