@@ -1,75 +1,101 @@
-import React, { useState } from 'react';
+import React from "react"
+import resumeData from "../resumeData"
 
-const Header = () => {
+interface Props {
+    data: {
+        personalInfo: typeof resumeData.header
+        socialLinks: typeof resumeData.socialLinks
+    }
+}
 
-	const [state, setState] = useState(false);
+const Header = ({ data }: Props) => {
+    return (
+        <header id="home">
+            <nav id="nav-wrap">
+                <a
+                    className="mobile-btn"
+                    href="#nav-wrap"
+                    title="Show navigation"
+                >
+                    Mostrar navegación
+                </a>
+                <a className="mobile-btn" href="#" title="Hide navigation">
+                    Ocultar navegación
+                </a>
+                <ul id="nav" className="nav">
+                    <li className="current">
+                        <a className="smoothscroll" href="#home">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a className="smoothscroll" href="#about">
+                            Sobre mí
+                        </a>
+                    </li>
+                    <li>
+                        <a className="smoothscroll" href="#resume">
+                            Resumen
+                        </a>
+                    </li>
+                    <li>
+                        <a className="smoothscroll" href="#portfolio">
+                            Proyectos personales
+                        </a>
+                    </li>
 
-	const toogle = () => {
-		const menu = document.querySelector(".cont-menu");
-		const sombra = document.querySelector<HTMLDivElement>(".sombra");
-		if (!state) {
-			menu?.classList.add("menu-activo");
-			if (sombra) {
-				sombra.style.display = "block";
-			}
-		} else {
-			menu?.classList.remove("menu-activo");
-			if (sombra) {
-				sombra.style.display = "none";
-			}
-		}
-		setState(!state);
-	}
+                    <a
+                        href="/ANDRISON-CV.pdf"
+                        className="btn-cv"
+                        download="CV de Andrison"
+                    >
+                        <li>Descargar CV</li>
+                    </a>
+                </ul>
+            </nav>
 
-	return (
-		<>
-			<header className="header__header">
-				<div className="cont-menu">
-					<li id="seccion1">
-						<a href="#sobreMiE">
-							Sobre mí
-						</a>
-					</li>
-					<li id="seccion2">
-						<a href="#portafolioE" >
-							Portafolio
-						</a>
-					</li>
+            <div className="row banner">
+                <div className="banner-text">
+                    <h1 className="responsive-headline">
+                        {data.personalInfo.name}
+                    </h1>
+                    <h3
+                        style={{
+                            color: "#fff",
+                            fontFamily: "sans-serif "
+                        }}
+                    >
+                        {data.personalInfo.role}
+                        <br />
+                        {data.personalInfo.roleDescription}
+                    </h3>
+                    <hr />
+                    <ul className="social">
+                        {data.socialLinks &&
+                            data.socialLinks.map((item) => {
+                                return (
+                                    <li key={item.name}>
+                                        <a
+                                            href={item.url}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <i className={item.className}></i>
+                                        </a>
+                                    </li>
+                                )
+                            })}
+                    </ul>
+                </div>
+            </div>
 
-					<li id="seccion3">
-						<a href="#extras" >
-							Datos extras
-						</a>
-					</li>
-
-					<li id="seccion4">
-						<a href="#contactoE" >
-							Contactame
-						</a>
-					</li>
-
-					<a
-						href="https://andrison1425.github.io/curri-pro.pdf"
-						className="btn-cv"
-						download="CV de Andrison"
-					>
-						<li>
-							Descargar CV
-						</li>
-					</a>
-				</div>
-				<i
-					className="fas fa-bars btn-menu"
-					onClick={toogle}
-				></i>
-			</header>
-			<div
-				className="sombra"
-				onClick={toogle}
-			></div>
-			<div className="reyeno"></div>
-		</>
-	)
+            <p className="scrolldown">
+                <a className="smoothscroll" href="#about">
+                    <i className="icon-down-circle"></i>
+                </a>
+            </p>
+        </header>
+    )
 }
 
 export default Header

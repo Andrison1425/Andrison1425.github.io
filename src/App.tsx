@@ -1,34 +1,28 @@
-import React, { useRef } from 'react'
-import Header from './components/Header'
-import AboutMe from './components/AboutMe'
-import Proyectos from './components/Projects'
-import Extras from './components/Extras'
-import Contact from './components/Contact'
-import useOnScreen from './hooks/useOnScreen'
+import React from "react"
+import Header from "./components/Header"
+import About from "./components/About"
+import Resume from "./components/Resume"
+import Portfolio from "./components/Portfolio"
+import Footer from "./components/Footer"
+import resumeData from "./resumeData"
+import ContactUs from "./components/ContactUs"
 
 const App = () => {
-
-    const references = {
-        ref1: useRef<HTMLElement>(null),
-        ref2: useRef<HTMLElement>(null),
-        ref3: useRef<HTMLElement>(null),
-        ref4: useRef<HTMLElement>(null),
-    }
-
-    useOnScreen(Object.values(references));
-
-    return <>
-        <div className="cont-ws">
-            <a target="a" href="https://api.whatsapp.com/send?phone=18097717766&text=Hola%20Andrison!">
-                <img src="images/ws.webp" alt='ws' />
-            </a>
+    return (
+        <div className="App">
+            <Header
+                data={{
+                    personalInfo: resumeData.header,
+                    socialLinks: resumeData.socialLinks
+                }}
+            />
+            <About resumeData={resumeData.aboutMe} />
+            <Resume data={resumeData.myResume} />
+            <Portfolio data={resumeData.portfolio} />
+            <ContactUs linkedinId={resumeData.linkedinId} />
+            <Footer data={resumeData.socialLinks} />
         </div>
-        <Header />
-        <AboutMe reference={references.ref1} />
-        <Proyectos reference={references.ref2} />
-        <Extras reference={references.ref3} />
-        <Contact reference={references.ref4} />
-    </>
+    )
 }
 
 export default App
